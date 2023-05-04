@@ -5,6 +5,12 @@ config:
   backend:ROUTE53_ZONE_NAME: equirock.fund
   landing:API_DOMAIN: equirock.fund
   landing:ROUTE53_ZONE_NAME: equirock.fund
+  injective:rpcs:
+    [
+      "https://k8s.global.mainnet.tm.injective.network/",
+      "https://rpc.injective.posthuman.digital/",
+      "https://injective-rpc.bharvest.io/",
+    ]
   pulumi:env_files: []
   webapp:API_DOMAIN: app.equirock.fund
   webapp:ROUTE53_ZONE_NAME: equirock.fund

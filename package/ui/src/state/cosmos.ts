@@ -33,7 +33,9 @@ export const keplrState = atom<{
   },
 });
 
-export const JUNO_RPCS = JSON.parse(import.meta.env.VITE_JUNO_RPCS) as string[];
+export const JUNO_RPCS = JSON.parse(
+  import.meta.env.VITE_INJECTIVE_RPCS
+) as string[];
 
 export const signClientState = selector<SigningCosmWasmClient | null>({
   key: "signClientState",
