@@ -65,6 +65,7 @@ jobs:
           VITE_FRONTEND_URL: ${{ env.webapp_url }}
           VITE_BACKEND_URL: ${{ env.backend_url }}
           VITE_INJECTIVE_RPCS: ${{ env.injective_rpcs }}
+          VITE_CLIENT_ROLLBAR_ACCESS_TOKEN: ${{ secrets.CLIENT_ROLLBAR_ACCESS_TOKEN }}
       - uses: actions/upload-artifact@v3
         with:
           name: website-equirock-${{ matrix.environment }}
