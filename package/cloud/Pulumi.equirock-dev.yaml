@@ -1,0 +1,10 @@
+encryptionsalt: v1:ciMTcKXM68w=:v1:czDRGQmZnoaM3knC:zcT1E9DeZKUipHwH2LdeOpu4YrzYQg==
+config:
+  aws:region: eu-central-1
+  backend:API_DOMAIN: api.dev.equirock.fund
+  backend:ROUTE53_ZONE_NAME: equirock.fund
+  landing:API_DOMAIN: dev.equirock.fund
+  landing:ROUTE53_ZONE_NAME: equirock.fund
+  pulumi:env_files: []
+  webapp:API_DOMAIN: app.dev.equirock.fund
+  webapp:ROUTE53_ZONE_NAME: equirock.fund
