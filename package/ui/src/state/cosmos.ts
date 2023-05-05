@@ -8,7 +8,7 @@ import { localStorageEffect, LOCAL_STORAGE_KEPLR_INTERACTED } from "./effects";
 export const chainState = atom({
   key: "chainState",
   default: {
-    chainId: "juno-1",
+    chainId: "injective-1",
   },
 });
 
@@ -33,7 +33,7 @@ export const keplrState = atom<{
   },
 });
 
-export const JUNO_RPCS = JSON.parse(
+export const INJECTIVE_RPCS = JSON.parse(
   import.meta.env.VITE_INJECTIVE_RPCS
 ) as string[];
 
@@ -55,10 +55,10 @@ export const signClientState = selector<SigningCosmWasmClient | null>({
     const clientIx = get(clientIxState);
     const chain = get(chainState);
     const offlineSigner = await window.getOfflineSignerAuto(chain.chainId);
-    for (let i = 0; i < JUNO_RPCS.length; i++) {
+    for (let i = 0; i < INJECTIVE_RPCS.length; i++) {
       try {
         const client = await SigningCosmWasmClient.connectWithSigner(
-          JUNO_RPCS[(clientIx + i) % JUNO_RPCS.length],
+          INJECTIVE_RPCS[(clientIx + i) % INJECTIVE_RPCS.length],
           offlineSigner
         );
 
@@ -79,10 +79,10 @@ export const clientState = selector<CosmWasmClient | null>({
     const { CosmWasmClient } = await import("@cosmjs/cosmwasm-stargate");
 
     const clientIx = get(clientIxState);
-    for (let i = 0; i < JUNO_RPCS.length; i++) {
+    for (let i = 0; i < INJECTIVE_RPCS.length; i++) {
       try {
         const client = await CosmWasmClient.connect(
-          JUNO_RPCS[(clientIx + i) % JUNO_RPCS.length]
+          INJECTIVE_RPCS[(clientIx + i) % INJECTIVE_RPCS.length]
         );
 
         return client;

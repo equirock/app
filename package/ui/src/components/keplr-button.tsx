@@ -49,5 +49,7 @@ export default function KeplrButton() {
     return <ConnectButton />;
   }
 
+  console.log(keplr);
+
   return <Fragment>Keplr connected</Fragment>;
 }
