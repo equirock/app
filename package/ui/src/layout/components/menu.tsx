@@ -1,10 +1,11 @@
 import {
+  Box,
   List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  ListSubheader,
 } from "@mui/material";
+import { Link as MuiLink } from "@mui/material";
 import { Fragment } from "react";
 
 import MarkEmailUnreadIcon from "@mui/icons-material/MarkEmailUnread";
@@ -24,11 +25,28 @@ export default function Menu() {
 
   return (
     <Fragment>
+      <Box>
+        <MuiLink
+          to="/"
+          color={"secondary"}
+          sx={{
+            textDecoration: "none",
+            display: "flex",
+          }}
+          component={Link}
+        >
+          <img src="/logo.png" width="60%" style={{ margin: "40px auto" }} />
+        </MuiLink>
+      </Box>
       <List
         sx={{ width: "100%", maxWidth: 360 }}
         component="nav"
         aria-labelledby="notification-type"
-        subheader={<ListSubheader component="div">Menu section</ListSubheader>}
+        // subheader={
+        //   <ListSubheader component="div" sx={{ background: "none" }}>
+        //     Menu section
+        //   </ListSubheader>
+        // }
       >
         <List component="div" disablePadding>
           <ListItemButton

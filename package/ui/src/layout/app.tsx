@@ -5,6 +5,7 @@ import {
   Grid,
   ThemeProvider,
   useMediaQuery,
+  alpha,
 } from "@mui/material";
 import { Container } from "@mui/system";
 import { Helmet } from "react-helmet";
@@ -26,25 +27,60 @@ export default function App() {
       <Snackbar />
       <CssBaseline />
 
-      <Container maxWidth="lg">
-        <Header />
+      <Box
+        sx={{
+          backgroundImage: "url('/images/body-bg.jpg')",
+          backgroundColor: (theme) => theme.palette.secondary.dark,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top center",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <Box
+          sx={{
+            width: "min(300px,30%)",
+            position: "fixed",
+            height: "100vh",
+            background: (theme) => alpha(theme.palette.secondary.main, 0.4),
+            backdropFilter: "blur(1rem) ",
+          }}
+        >
+          <Menu />
+        </Box>
+        <Box
+          sx={{
+            ml: "min(300px,30%)",
+            height: "500px",
+            background: "rgba(0,0,0,0.2)",
+            minHeight: "100vh",
+            p: 0,
+            backdropFilter: "saturate(80%) blur(2px)",
+          }}
+        >
+          <Header />
 
-        <Fragment>
-          <Grid container>
-            <Grid item lg={2} sm={3} xs={12}>
-              <Box sx={{ position: { sm: "sticky" }, top: { sm: 8 } }}>
-                <Menu />
-              </Box>
-            </Grid>
-            <Grid item lg={10} sm={9} xs={12}>
-              <Box sx={{ mt: 1, ml: { sm: 5 } }}>
-                <Outlet />
-              </Box>
-            </Grid>
+          <Box sx={{ px: 4, py: 2 }}>
+            <Outlet />
+          </Box>
+
+          <Footer />
+        </Box>
+      </Box>
+
+      {/* <Container maxWidth="lg"> */}
+
+      {/* <Fragment>
+        <Grid container>
+          <Grid item lg={2} sm={3} xs={12}>
+            <Box sx={{ position: { sm: "sticky" }, top: { sm: 8 } }}></Box>
           </Grid>
-        </Fragment>
-        <Footer />
-      </Container>
+          <Grid item lg={10} sm={9} xs={12}>
+            <Box sx={{ mt: 1, ml: { sm: 5 } }}></Box>
+          </Grid>
+        </Grid>
+      </Fragment> */}
+      {/* </Container> */}
     </ThemeProvider>
   );
 }

@@ -26,6 +26,8 @@ const abstractTheme = {
     MuiButton: {},
   },
   palette: {
+    violet: createColor("#a8189d"),
+    darkblue: createColor("#2b2086"),
     bluegreen: createColor("#73C4D3"),
     red: createColor("#f34b1c"),
     darkgrey: createColor("#182123"),
@@ -56,12 +58,12 @@ export const lightTheme = responsiveFontSizes(
     {
       palette: {
         mode: "light",
-        primary: abstractTheme.palette.bluegreen,
-        secondary: abstractTheme.palette.red,
+        primary: abstractTheme.palette.violet,
+        secondary: abstractTheme.palette.darkblue,
       },
       typography: {
         allVariants: {
-          color: abstractTheme.palette.darkgrey.main,
+          color: "white",
         },
       },
     },
