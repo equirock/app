@@ -23,7 +23,7 @@
     "@injectivelabs/wallet-ts": "1.11.0",
     "@keplr-wallet/types": "0.12.9",
     "@mui/icons-material": "5.11.16",
-    "@mui/material": "5.13.4",
+    "@mui/material": "5.13.5",
     "@rollbar/react": "0.11.1",
     "cosmjs-types": "0.8.0",
     "decimal.js": "10.4.3",
