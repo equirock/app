@@ -16,7 +16,7 @@
     "@cosmjs/encoding": "0.31.1",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
-    "@injectivelabs/networks": "1.12.1",
+    "@injectivelabs/networks": "1.13.0",
     "@injectivelabs/sdk-ts": "1.12.1",
     "@injectivelabs/ts-types": "1.12.1",
     "@injectivelabs/utils": "1.12.1",
