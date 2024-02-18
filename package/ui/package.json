@@ -14,7 +14,7 @@
   "dependencies": {
     "@cosmjs/cosmwasm-stargate": "0.31.3",
     "@cosmjs/encoding": "0.32.2",
-    "@emotion/react": "11.11.1",
+    "@emotion/react": "11.11.3",
     "@emotion/styled": "11.11.0",
     "@injectivelabs/networks": "1.14.4",
     "@injectivelabs/sdk-ts": "1.14.4",
