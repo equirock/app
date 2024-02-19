@@ -35,7 +35,7 @@
     "react-query": "3.39.3",
     "react-router-dom": "6.21.0",
     "recoil": "0.7.7",
-    "rollbar": "2.26.2"
+    "rollbar": "2.26.3"
   },
   "devDependencies": {
     "@bangjelkoski/vite-plugin-node-polyfills": "0.0.2",
