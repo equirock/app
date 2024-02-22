@@ -66,7 +66,7 @@ jobs:
           VITE_BACKEND_URL: ${{ env.backend_url }}
           VITE_INJECTIVE_RPCS: ${{ env.injective_rpcs }}
           VITE_CLIENT_ROLLBAR_ACCESS_TOKEN: ${{ secrets.CLIENT_ROLLBAR_ACCESS_TOKEN }}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: website-equirock-${{ matrix.environment }}
           path: ./package/ui/dist
@@ -84,7 +84,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: website-equirock-prod
           path: ./package/ui/dist
